@@ -1,0 +1,178 @@
+/*
+You can edit this whole file.
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --gray-0: #000000;
+  --gray-1: #222222;
+  --gray-2: #dddddd;
+  --gray-3: #fbfbfb;
+  --gray-4: #ffffff;
+  --primary: #8a2be2;
+  --secondary: #20d397;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1rem;
+  --font-weight-thin: 300;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 800;
+  --spacer-1: 0.25rem;
+  --spacer-2: 0.5rem;
+  --spacer-3: 1rem;
+  --spacer-4: 1.5rem;
+  --spacer-5: 2rem;
+  --shadows: 7px 7px 7px rgba(0, 0, 0, 0.15);
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+/* 
+Facundo Gonzalez Vivo
+23/11/2024
+www.facundogonzalezvivo.cl
+contacto@facundogonzalezvivo.cl
+ */
+
+.header {
+  background-color: var(--secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  color: var(--gray-4);
+  font-weight: var(--font-weight-bold);
+}
+.header img {
+  height: 35px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.header ul li {
+  display: inline;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: var(--gray-4);
+  font-weight: var(--font-weight-heavy);
+}
+
+.header ul li.active a {
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+  color: var(--gray-4);
+  font-weight: var(--font-weight-heavy);
+}
+.content {
+  width: 70%;
+  margin: 80px auto;
+}
+.content h1 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-heavy);
+  color: var(--gray-0);
+  margin: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  padding: 20px;
+  text-align: left;
+}
+
+.card p {
+  margin: 5px;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--gray-4);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.card a img {
+  margin-right: 8px;
+  height: 16px;
+}
+
+::selection {
+  background-color: #6bffff;
+  color: var(--gray-0);
+  display: inline;
+  width: 100%;
+}
+
+/*Reponsive section - media queries*/
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+
+  .header .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    color: var(--gray-4);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .content {
+    width: 95%;
+    margin: 80px auto;
+  }
+  .cards-container {
+    margin: 10px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 25px;
+  }
+}
